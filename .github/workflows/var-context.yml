@@ -11,8 +11,7 @@ on:
 
 jobs:
   job1:
-    runs-on:
-      - ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Dump github context
@@ -20,8 +19,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         run: echo "$GITHUB_CONTEXT"
   job2:
-    runs-on:
-      -ubuntu-latest
+    runs-on: ubuntu-latest
 
     outputs:
       output1: ${{ steps.step1.outputs.step1value }}
